@@ -1,74 +1,175 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Unhas de Fibra</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Nails de Fibra: Seu Guia Completo</h1>
-    </header>
-    <main>
-        <article>
-            <h2>Passo 1: Preparação é Tudo!</h2>
-            <img src="preparacao.jpg" alt="Preparação das unhas">
-            <p>A base para um alongamento perfeito começa com uma preparação impecável. Sem ela, o gel não adere e o alongamento pode descolar rapidamente.</p>
-            <ul>
-                <li>Higienização</li>
-                <li>Afaste a Cutícula</li>
-                <li>Remova o Brilho</li>
-                <li>Desidratador e Primer</li>
-            </ul>
-        </article>
-        </main>
-    <footer>
-        <p>&copy; 2024 Nails de Fibra. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+    <title>Blog Nails Academy | Aprenda Unhas de Fibra</title>
+    <style>
+        /* RESET E CONFIGURAÇÕES GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+        body {
+            background-color: #fbf8f8;
+            color: #444;
+            line-height: 1.6;
+        }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+        /* CABEÇALHO (HEADER) */
+        header {
+            background: linear-gradient(135deg, #ffccd5, #ffb3c1);
+            color: #4a2830;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid #ff85a1;
+        }
 
-main {
-    padding: 20px;
-}
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
 
-article {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
+        header p {
+            font-size: 1.1rem;
+            font-style: italic;
+        }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-}
+        /* MENU DE NAVEGAÇÃO */
+        nav {
+            background-color: #2b2d42;
+            padding: 0.8rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-ul {
-    list-style: disc;
-    margin-left: 20px;
-}
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
+        nav a:hover {
+            color: #ff85a1;
+        }
+
+        /* ESTRUTURA PRINCIPAL (CONTAINER) */
+        .container {
+            max-width: 1140px;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 2rem;
+        }
+
+        /* POSTS DO BLOG */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        article {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0e6e8;
+        }
+
+        .post-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            background-color: #e9ecef; /* Cor de fundo caso a imagem falhe */
+        }
+
+        .post-content {
+            padding: 1.8rem;
+        }
+
+        .post-tag {
+            display: inline-block;
+            background-color: #fff0f3;
+            color: #ff4d6d;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        article h2 {
+            color: #2b2d42;
+            font-size: 1.6rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .meta-info {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .btn-leia-mais {
+            display: inline-block;
+            background-color: #ff4d6d;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 1.2rem;
+            transition: background 0.3s;
+        }
+
+        .btn-leia-mais:hover {
+            background-color: #c9184a;
+        }
+
+        /* BARRA LATERAL (SIDEBAR) */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-box {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0e6e8;
+        }
+
+        .sidebar-box h3 {
+            color: #2b2d42;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #ff4d6d;
+            padding-left: 8px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 1rem auto;
+            background-color: #e9ecef;
+        }
+
+        .cta-curso {
+            background: linear-gradient(13
